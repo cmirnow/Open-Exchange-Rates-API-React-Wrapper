@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Open-Exchange-Rates-API-React-Wrapper/static/css/main.e6c13ad2.css",
+    "main.js": "/Open-Exchange-Rates-API-React-Wrapper/static/js/main.4cc28a93.js",
+    "static/js/787.86e43e52.chunk.js": "/Open-Exchange-Rates-API-React-Wrapper/static/js/787.86e43e52.chunk.js",
+    "index.html": "/Open-Exchange-Rates-API-React-Wrapper/index.html",
+    "main.e6c13ad2.css.map": "/Open-Exchange-Rates-API-React-Wrapper/static/css/main.e6c13ad2.css.map",
+    "main.4cc28a93.js.map": "/Open-Exchange-Rates-API-React-Wrapper/static/js/main.4cc28a93.js.map",
+    "787.86e43e52.chunk.js.map": "/Open-Exchange-Rates-API-React-Wrapper/static/js/787.86e43e52.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.4cc28a93.js"
+  ]
+}
