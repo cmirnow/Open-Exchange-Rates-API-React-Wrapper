@@ -7,7 +7,7 @@ addMore(Highcharts);
 
 const url = `https://openexchangerates.org/api/latest.json?app_id=
 ${process.env.REACT_APP_CLIENT_ID}
-&symbols=EUR,CHF,GBP,SEK,DKK,NOK,CZK,PLN,AUD,NZD,CAD,MXN,SGD,HKD,JPY,CNH,RUB,TRY,ILS`;
+&symbols=EUR,CHF,GBP,SEK,DKK,NOK,CZK,PLN,AUD,NZD,USD,CAD,MXN,SGD,HKD,JPY,CNH,RUB,TRY,ILS,BRL,ARS,VES,MGA,EGP`;
 
 function App() {
   const [apiData, setApiData] = useState({});
@@ -122,7 +122,7 @@ function App() {
         data: [
           {
             name: "USD",
-            value: 1,
+            value: apiData.rates?.USD,
           },
           {
             name: "CAD",
@@ -131,6 +131,36 @@ function App() {
           {
             name: "MXN",
             value: apiData.rates?.MXN,
+          },
+        ],
+      },
+      {
+        name: "South America",
+        data: [
+          {
+            name: "BRL",
+            value: apiData.rates?.BRL,
+          },
+          {
+            name: "ARS",
+            value: apiData.rates?.ARS,
+          },
+          {
+            name: "VES",
+            value: apiData.rates?.VES,
+          },
+        ],
+      },
+      {
+        name: "Africa",
+        data: [
+          {
+            name: "MGA",
+            value: apiData.rates?.MGA,
+          },
+          {
+            name: "EGP",
+            value: apiData.rates?.EGP,
           },
         ],
       },
