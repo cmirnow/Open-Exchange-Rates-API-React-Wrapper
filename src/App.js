@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import moment from "moment";
 import Highcharts from "highcharts";
 import addMore from "highcharts/highcharts-more";
 import HighchartsReact from "highcharts-react-official";
 addMore(Highcharts);
 
-const url = `https://openexchangerates.org/api/latest.json?app_id=${process.env.REACT_APP_CLIENT_ID}`;
+const url = `https://openexchangerates.org/api/latest.json?app_id=
+${process.env.REACT_APP_CLIENT_ID}
+&symbols=EUR,CHF,GBP,SEK,DKK,NOK,CZK,PLN,AUD,NZD,CAD,MXN,SGD,HKD,JPY,CNH,RUB,TRY,ILS`;
 
 function App() {
   const [apiData, setApiData] = useState({});
@@ -28,14 +31,14 @@ function App() {
   var options = {
     chart: {
       type: "packedbubble",
-      height: "60%",
+      height: "70%",
     },
     title: {
-      text: "Exchange Rates",
+      text: "Exchange Rates. Source: OpenExchangeRates.org.",
       align: "left",
     },
     subtitle: {
-      text: "Source: OpenExchangeRates.org",
+      text: moment.unix(apiData.timestamp).format("MMMM Do YYYY, h:mm:ss a"),
       align: "left",
     },
     tooltip: {
@@ -119,7 +122,7 @@ function App() {
         data: [
           {
             name: "USD",
-            value: apiData.rates?.USD,
+            value: 1,
           },
           {
             name: "CAD",
