@@ -31,7 +31,7 @@ function App() {
   var options = {
     chart: {
       type: "packedbubble",
-      height: "70%",
+      height: "60%",
     },
     title: {
       text: "Exchange Rates. Source: OpenExchangeRates.org.",
@@ -40,6 +40,13 @@ function App() {
     subtitle: {
       text: moment.unix(apiData.timestamp).format("MMMM Do YYYY, h:mm:ss a"),
       align: "left",
+    },
+    legend: {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'bottom',
+      itemMarginTop: 10,
+      itemMarginBottom: 10,
     },
     tooltip: {
       useHTML: true,
