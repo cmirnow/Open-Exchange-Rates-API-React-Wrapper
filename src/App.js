@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 import Highcharts from "highcharts";
 import addMore from "highcharts/highcharts-more";
+import addAccessibility from "highcharts/modules/accessibility";
 import HighchartsReact from "highcharts-react-official";
 addMore(Highcharts);
+addAccessibility(Highcharts);
 
 const url = `https://openexchangerates.org/api/latest.json?app_id=
 ${process.env.REACT_APP_CLIENT_ID}
