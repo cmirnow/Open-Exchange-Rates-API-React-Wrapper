@@ -4,11 +4,11 @@ export const getChartOptions = (apiData, regions) => {
   const timestamp = apiData.timestamp || 0;
   const rates = apiData.rates || {};
 
-  // Формируем серии динамически на основе объекта regions
+  // Form series dynamically based on the object regions
   const series = Object.entries(regions).map(([name, currencies]) => ({
     name,
     data: currencies
-      .filter((currency) => rates[currency] !== undefined) // Фильтруем только существующие валюты
+      .filter((currency) => rates[currency] !== undefined) // Filter only existing currencies
       .map((currency) => ({
         name: currency,
         value: rates[currency],
@@ -60,6 +60,6 @@ export const getChartOptions = (apiData, regions) => {
         },
       },
     },
-    series, // Используем динамически сформированные серии
+    series, // Using dynamically generated series
   };
 };

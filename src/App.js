@@ -10,7 +10,6 @@ addAccessibility(Highcharts);
 
 const ExchangeRateChart = React.lazy(() => import("./components/ExchangeRateChart"));
 
-// Определяем регионы и валюты, соответствующие URL
 const regions = {
   Europe: ["EUR", "CHF", "GBP", "SEK", "DKK", "NOK", "CZK", "PLN"],
   Oceania: ["AUD", "NZD"],
@@ -27,7 +26,7 @@ function App() {
     fetchExchangeRates(setApiData).catch((error) => {
       console.error("Error fetching exchange rates:", error.message);
     });
-  }, []);
+  }, []); // Called only when mounting (opening a page)
 
   const chartOptions = useMemo(() => getChartOptions(apiData, regions), [apiData]);
 
